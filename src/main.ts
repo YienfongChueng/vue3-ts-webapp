@@ -1,0 +1,8 @@
+import { createApp } from 'vue'
+import './style.less'
+import './assets/font/iconfont.css'
+import App from './App.vue'
+import router from '@/router/index'
+import store from '@/store/index'
+
+createApp(App).use(router).use(store).mount('#app')

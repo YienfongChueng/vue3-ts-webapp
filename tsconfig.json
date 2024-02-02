@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // 目标语言的版本
+    "useDefineForClassFields": true,
+    "module": "esnext", // 生成代码的模板标准
+    "lib": ["esnext", "DOM", "DOM.Iterable"], // TS需要引用的库，编译时引入的ES功能库
+    "skipLibCheck": true,
+    "types": ["node"], //加载的声明文件包
+    "baseUrl":".",
+    "paths":{
+      "@/*":["src/*"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "node",  // 模块解析策略，TS默认用node的解析策略，即相对的方式导入
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true, // 解析json模块
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",// 在.tsc中支持jsx
+
+    /* Linting */
+    "strict": true,// 开启所有严格的类型检查
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
